@@ -16,6 +16,9 @@
 		7626580F2C7B7B8400CB4376 /* RogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626580E2C7B7B8400CB4376 /* RogramTests.swift */; };
 		762658192C7B7B8400CB4376 /* RogramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658182C7B7B8400CB4376 /* RogramUITests.swift */; };
 		7626581B2C7B7B8400CB4376 /* RogramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626581A2C7B7B8400CB4376 /* RogramUITestsLaunchTests.swift */; };
+		7626582E2C7B7EB400CB4376 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626582D2C7B7EB400CB4376 /* Post.swift */; };
+		762658302C7B7F4400CB4376 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626582F2C7B7F4400CB4376 /* NetworkService.swift */; };
+		762658322C7B82EA00CB4376 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658312C7B82EA00CB4376 /* PostService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		762658142C7B7B8400CB4376 /* RogramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RogramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		762658182C7B7B8400CB4376 /* RogramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogramUITests.swift; sourceTree = "<group>"; };
 		7626581A2C7B7B8400CB4376 /* RogramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogramUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7626582D2C7B7EB400CB4376 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		7626582F2C7B7F4400CB4376 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		762658312C7B82EA00CB4376 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		762657F62C7B7B8300CB4376 /* Rogram */ = {
 			isa = PBXGroup;
 			children = (
+				7626582C2C7B7E9D00CB4376 /* Models */,
 				7626582B2C7B7BBE00CB4376 /* Transitions */,
 				7626582A2C7B7BBA00CB4376 /* Cells */,
 				762658292C7B7BB300CB4376 /* Services */,
@@ -149,6 +156,8 @@
 		762658292C7B7BB300CB4376 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7626582F2C7B7F4400CB4376 /* NetworkService.swift */,
+				762658312C7B82EA00CB4376 /* PostService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -165,6 +174,14 @@
 			children = (
 			);
 			path = Transitions;
+			sourceTree = "<group>";
+		};
+		7626582C2C7B7E9D00CB4376 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7626582D2C7B7EB400CB4376 /* Post.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,9 +315,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				762658302C7B7F4400CB4376 /* NetworkService.swift in Sources */,
+				762658322C7B82EA00CB4376 /* PostService.swift in Sources */,
 				762657FC2C7B7B8300CB4376 /* ViewController.swift in Sources */,
 				762657F82C7B7B8300CB4376 /* AppDelegate.swift in Sources */,
 				762657FA2C7B7B8300CB4376 /* SceneDelegate.swift in Sources */,
+				7626582E2C7B7EB400CB4376 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
