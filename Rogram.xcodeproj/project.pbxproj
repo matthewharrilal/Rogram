@@ -22,6 +22,10 @@
 		762658342C7B863900CB4376 /* AggregatedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658332C7B863900CB4376 /* AggregatedPost.swift */; };
 		762658372C7B8E0000CB4376 /* FeaturedPostsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658362C7B8E0000CB4376 /* FeaturedPostsLayout.swift */; };
 		762658392C7B912700CB4376 /* FeaturedPostsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658382C7B912700CB4376 /* FeaturedPostsCollectionViewCell.swift */; };
+		767EB4862C7BEC2C008524CF /* PhotoTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4852C7BEC2C008524CF /* PhotoTransitionDelegate.swift */; };
+		767EB4882C7BEC40008524CF /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4872C7BEC40008524CF /* PhotoDetailViewController.swift */; };
+		767EB48A2C7BED4F008524CF /* PhotoDetailAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4892C7BED4F008524CF /* PhotoDetailAnimator.swift */; };
+		767EB48C2C7BEDCE008524CF /* PhotoDetailPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB48B2C7BEDCE008524CF /* PhotoDetailPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		762658332C7B863900CB4376 /* AggregatedPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregatedPost.swift; sourceTree = "<group>"; };
 		762658362C7B8E0000CB4376 /* FeaturedPostsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPostsLayout.swift; sourceTree = "<group>"; };
 		762658382C7B912700CB4376 /* FeaturedPostsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPostsCollectionViewCell.swift; sourceTree = "<group>"; };
+		767EB4852C7BEC2C008524CF /* PhotoTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTransitionDelegate.swift; sourceTree = "<group>"; };
+		767EB4872C7BEC40008524CF /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		767EB4892C7BED4F008524CF /* PhotoDetailAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailAnimator.swift; sourceTree = "<group>"; };
+		767EB48B2C7BEDCE008524CF /* PhotoDetailPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				762657FB2C7B7B8300CB4376 /* AlbumsViewController.swift */,
+				767EB4872C7BEC40008524CF /* PhotoDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -180,6 +189,9 @@
 		7626582B2C7B7BBE00CB4376 /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
+				767EB4852C7BEC2C008524CF /* PhotoTransitionDelegate.swift */,
+				767EB4892C7BED4F008524CF /* PhotoDetailAnimator.swift */,
+				767EB48B2C7BEDCE008524CF /* PhotoDetailPresentationController.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -332,10 +344,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				767EB48A2C7BED4F008524CF /* PhotoDetailAnimator.swift in Sources */,
+				767EB4862C7BEC2C008524CF /* PhotoTransitionDelegate.swift in Sources */,
 				762658302C7B7F4400CB4376 /* NetworkService.swift in Sources */,
 				762658342C7B863900CB4376 /* AggregatedPost.swift in Sources */,
 				762658392C7B912700CB4376 /* FeaturedPostsCollectionViewCell.swift in Sources */,
+				767EB48C2C7BEDCE008524CF /* PhotoDetailPresentationController.swift in Sources */,
 				762658322C7B82EA00CB4376 /* PostService.swift in Sources */,
+				767EB4882C7BEC40008524CF /* PhotoDetailViewController.swift in Sources */,
 				762657FC2C7B7B8300CB4376 /* AlbumsViewController.swift in Sources */,
 				762657F82C7B7B8300CB4376 /* AppDelegate.swift in Sources */,
 				762657FA2C7B7B8300CB4376 /* SceneDelegate.swift in Sources */,
