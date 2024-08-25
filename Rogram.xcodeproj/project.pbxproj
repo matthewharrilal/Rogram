@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		762657F82C7B7B8300CB4376 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762657F72C7B7B8300CB4376 /* AppDelegate.swift */; };
 		762657FA2C7B7B8300CB4376 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762657F92C7B7B8300CB4376 /* SceneDelegate.swift */; };
-		762657FC2C7B7B8300CB4376 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762657FB2C7B7B8300CB4376 /* ViewController.swift */; };
+		762657FC2C7B7B8300CB4376 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762657FB2C7B7B8300CB4376 /* AlbumsViewController.swift */; };
 		762657FF2C7B7B8300CB4376 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762657FD2C7B7B8300CB4376 /* Main.storyboard */; };
 		762658012C7B7B8400CB4376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762658002C7B7B8400CB4376 /* Assets.xcassets */; };
 		762658042C7B7B8400CB4376 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762658022C7B7B8400CB4376 /* LaunchScreen.storyboard */; };
@@ -20,6 +20,8 @@
 		762658302C7B7F4400CB4376 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626582F2C7B7F4400CB4376 /* NetworkService.swift */; };
 		762658322C7B82EA00CB4376 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658312C7B82EA00CB4376 /* PostService.swift */; };
 		762658342C7B863900CB4376 /* AggregatedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658332C7B863900CB4376 /* AggregatedPost.swift */; };
+		762658372C7B8E0000CB4376 /* FeaturedPostsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658362C7B8E0000CB4376 /* FeaturedPostsLayout.swift */; };
+		762658392C7B912700CB4376 /* FeaturedPostsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658382C7B912700CB4376 /* FeaturedPostsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,7 @@
 		762657F42C7B7B8300CB4376 /* Rogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		762657F72C7B7B8300CB4376 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		762657F92C7B7B8300CB4376 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		762657FB2C7B7B8300CB4376 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		762657FB2C7B7B8300CB4376 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		762657FE2C7B7B8300CB4376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		762658002C7B7B8400CB4376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		762658032C7B7B8400CB4376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		7626582F2C7B7F4400CB4376 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		762658312C7B82EA00CB4376 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		762658332C7B863900CB4376 /* AggregatedPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregatedPost.swift; sourceTree = "<group>"; };
+		762658362C7B8E0000CB4376 /* FeaturedPostsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPostsLayout.swift; sourceTree = "<group>"; };
+		762658382C7B912700CB4376 /* FeaturedPostsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPostsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		762657F62C7B7B8300CB4376 /* Rogram */ = {
 			isa = PBXGroup;
 			children = (
+				762658352C7B8DF000CB4376 /* Layouts */,
 				7626582C2C7B7E9D00CB4376 /* Models */,
 				7626582B2C7B7BBE00CB4376 /* Transitions */,
 				7626582A2C7B7BBA00CB4376 /* Cells */,
@@ -143,7 +148,7 @@
 		762658272C7B7BA500CB4376 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				762657FB2C7B7B8300CB4376 /* ViewController.swift */,
+				762657FB2C7B7B8300CB4376 /* AlbumsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 		7626582A2C7B7BBA00CB4376 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				762658382C7B912700CB4376 /* FeaturedPostsCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -185,6 +191,14 @@
 				762658332C7B863900CB4376 /* AggregatedPost.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		762658352C7B8DF000CB4376 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				762658362C7B8E0000CB4376 /* FeaturedPostsLayout.swift */,
+			);
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,10 +334,12 @@
 			files = (
 				762658302C7B7F4400CB4376 /* NetworkService.swift in Sources */,
 				762658342C7B863900CB4376 /* AggregatedPost.swift in Sources */,
+				762658392C7B912700CB4376 /* FeaturedPostsCollectionViewCell.swift in Sources */,
 				762658322C7B82EA00CB4376 /* PostService.swift in Sources */,
-				762657FC2C7B7B8300CB4376 /* ViewController.swift in Sources */,
+				762657FC2C7B7B8300CB4376 /* AlbumsViewController.swift in Sources */,
 				762657F82C7B7B8300CB4376 /* AppDelegate.swift in Sources */,
 				762657FA2C7B7B8300CB4376 /* SceneDelegate.swift in Sources */,
+				762658372C7B8E0000CB4376 /* FeaturedPostsLayout.swift in Sources */,
 				7626582E2C7B7EB400CB4376 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
