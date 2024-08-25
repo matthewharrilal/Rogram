@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		762657F82C7B7B8300CB4376 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762657F72C7B7B8300CB4376 /* AppDelegate.swift */; };
+		762657FA2C7B7B8300CB4376 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762657F92C7B7B8300CB4376 /* SceneDelegate.swift */; };
+		762657FC2C7B7B8300CB4376 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762657FB2C7B7B8300CB4376 /* ViewController.swift */; };
+		762657FF2C7B7B8300CB4376 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762657FD2C7B7B8300CB4376 /* Main.storyboard */; };
+		762658012C7B7B8400CB4376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762658002C7B7B8400CB4376 /* Assets.xcassets */; };
+		762658042C7B7B8400CB4376 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762658022C7B7B8400CB4376 /* LaunchScreen.storyboard */; };
+		7626580F2C7B7B8400CB4376 /* RogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626580E2C7B7B8400CB4376 /* RogramTests.swift */; };
+		762658192C7B7B8400CB4376 /* RogramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658182C7B7B8400CB4376 /* RogramUITests.swift */; };
+		7626581B2C7B7B8400CB4376 /* RogramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626581A2C7B7B8400CB4376 /* RogramUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7626580B2C7B7B8400CB4376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 762657EC2C7B7B8300CB4376 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 762657F32C7B7B8300CB4376;
+			remoteInfo = Rogram;
+		};
+		762658152C7B7B8400CB4376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 762657EC2C7B7B8300CB4376 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 762657F32C7B7B8300CB4376;
+			remoteInfo = Rogram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		762657F42C7B7B8300CB4376 /* Rogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		762657F72C7B7B8300CB4376 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		762657F92C7B7B8300CB4376 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		762657FB2C7B7B8300CB4376 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		762657FE2C7B7B8300CB4376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		762658002C7B7B8400CB4376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		762658032C7B7B8400CB4376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		762658052C7B7B8400CB4376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7626580A2C7B7B8400CB4376 /* RogramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RogramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7626580E2C7B7B8400CB4376 /* RogramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogramTests.swift; sourceTree = "<group>"; };
+		762658142C7B7B8400CB4376 /* RogramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RogramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		762658182C7B7B8400CB4376 /* RogramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogramUITests.swift; sourceTree = "<group>"; };
+		7626581A2C7B7B8400CB4376 /* RogramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogramUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		762657F12C7B7B8300CB4376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		762658072C7B7B8400CB4376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		762658112C7B7B8400CB4376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		762657EB2C7B7B8300CB4376 = {
+			isa = PBXGroup;
+			children = (
+				762657F62C7B7B8300CB4376 /* Rogram */,
+				7626580D2C7B7B8400CB4376 /* RogramTests */,
+				762658172C7B7B8400CB4376 /* RogramUITests */,
+				762657F52C7B7B8300CB4376 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		762657F52C7B7B8300CB4376 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				762657F42C7B7B8300CB4376 /* Rogram.app */,
+				7626580A2C7B7B8400CB4376 /* RogramTests.xctest */,
+				762658142C7B7B8400CB4376 /* RogramUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		762657F62C7B7B8300CB4376 /* Rogram */ = {
+			isa = PBXGroup;
+			children = (
+				7626582B2C7B7BBE00CB4376 /* Transitions */,
+				7626582A2C7B7BBA00CB4376 /* Cells */,
+				762658292C7B7BB300CB4376 /* Services */,
+				762658282C7B7BAD00CB4376 /* Views */,
+				762658272C7B7BA500CB4376 /* View Controllers */,
+				762657F72C7B7B8300CB4376 /* AppDelegate.swift */,
+				762657F92C7B7B8300CB4376 /* SceneDelegate.swift */,
+				762657FD2C7B7B8300CB4376 /* Main.storyboard */,
+				762658002C7B7B8400CB4376 /* Assets.xcassets */,
+				762658022C7B7B8400CB4376 /* LaunchScreen.storyboard */,
+				762658052C7B7B8400CB4376 /* Info.plist */,
+			);
+			path = Rogram;
+			sourceTree = "<group>";
+		};
+		7626580D2C7B7B8400CB4376 /* RogramTests */ = {
+			isa = PBXGroup;
+			children = (
+				7626580E2C7B7B8400CB4376 /* RogramTests.swift */,
+			);
+			path = RogramTests;
+			sourceTree = "<group>";
+		};
+		762658172C7B7B8400CB4376 /* RogramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				762658182C7B7B8400CB4376 /* RogramUITests.swift */,
+				7626581A2C7B7B8400CB4376 /* RogramUITestsLaunchTests.swift */,
+			);
+			path = RogramUITests;
+			sourceTree = "<group>";
+		};
+		762658272C7B7BA500CB4376 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				762657FB2C7B7B8300CB4376 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		762658282C7B7BAD00CB4376 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		762658292C7B7BB300CB4376 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7626582A2C7B7BBA00CB4376 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7626582B2C7B7BBE00CB4376 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		762657F32C7B7B8300CB4376 /* Rogram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7626581E2C7B7B8400CB4376 /* Build configuration list for PBXNativeTarget "Rogram" */;
+			buildPhases = (
+				762657F02C7B7B8300CB4376 /* Sources */,
+				762657F12C7B7B8300CB4376 /* Frameworks */,
+				762657F22C7B7B8300CB4376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rogram;
+			productName = Rogram;
+			productReference = 762657F42C7B7B8300CB4376 /* Rogram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		762658092C7B7B8400CB4376 /* RogramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 762658212C7B7B8400CB4376 /* Build configuration list for PBXNativeTarget "RogramTests" */;
+			buildPhases = (
+				762658062C7B7B8400CB4376 /* Sources */,
+				762658072C7B7B8400CB4376 /* Frameworks */,
+				762658082C7B7B8400CB4376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7626580C2C7B7B8400CB4376 /* PBXTargetDependency */,
+			);
+			name = RogramTests;
+			productName = RogramTests;
+			productReference = 7626580A2C7B7B8400CB4376 /* RogramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		762658132C7B7B8400CB4376 /* RogramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 762658242C7B7B8400CB4376 /* Build configuration list for PBXNativeTarget "RogramUITests" */;
+			buildPhases = (
+				762658102C7B7B8400CB4376 /* Sources */,
+				762658112C7B7B8400CB4376 /* Frameworks */,
+				762658122C7B7B8400CB4376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				762658162C7B7B8400CB4376 /* PBXTargetDependency */,
+			);
+			name = RogramUITests;
+			productName = RogramUITests;
+			productReference = 762658142C7B7B8400CB4376 /* RogramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		762657EC2C7B7B8300CB4376 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					762657F32C7B7B8300CB4376 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					762658092C7B7B8400CB4376 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 762657F32C7B7B8300CB4376;
+					};
+					762658132C7B7B8400CB4376 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 762657F32C7B7B8300CB4376;
+					};
+				};
+			};
+			buildConfigurationList = 762657EF2C7B7B8300CB4376 /* Build configuration list for PBXProject "Rogram" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 762657EB2C7B7B8300CB4376;
+			productRefGroup = 762657F52C7B7B8300CB4376 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				762657F32C7B7B8300CB4376 /* Rogram */,
+				762658092C7B7B8400CB4376 /* RogramTests */,
+				762658132C7B7B8400CB4376 /* RogramUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		762657F22C7B7B8300CB4376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				762658042C7B7B8400CB4376 /* LaunchScreen.storyboard in Resources */,
+				762658012C7B7B8400CB4376 /* Assets.xcassets in Resources */,
+				762657FF2C7B7B8300CB4376 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		762658082C7B7B8400CB4376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		762658122C7B7B8400CB4376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		762657F02C7B7B8300CB4376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				762657FC2C7B7B8300CB4376 /* ViewController.swift in Sources */,
+				762657F82C7B7B8300CB4376 /* AppDelegate.swift in Sources */,
+				762657FA2C7B7B8300CB4376 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		762658062C7B7B8400CB4376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7626580F2C7B7B8400CB4376 /* RogramTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		762658102C7B7B8400CB4376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7626581B2C7B7B8400CB4376 /* RogramUITestsLaunchTests.swift in Sources */,
+				762658192C7B7B8400CB4376 /* RogramUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7626580C2C7B7B8400CB4376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 762657F32C7B7B8300CB4376 /* Rogram */;
+			targetProxy = 7626580B2C7B7B8400CB4376 /* PBXContainerItemProxy */;
+		};
+		762658162C7B7B8400CB4376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 762657F32C7B7B8300CB4376 /* Rogram */;
+			targetProxy = 762658152C7B7B8400CB4376 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		762657FD2C7B7B8300CB4376 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				762657FE2C7B7B8300CB4376 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		762658022C7B7B8400CB4376 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				762658032C7B7B8400CB4376 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7626581C2C7B7B8400CB4376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7626581D2C7B7B8400CB4376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7626581F2C7B7B8400CB4376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4WEEFNVWZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rogram/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rogram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		762658202C7B7B8400CB4376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4WEEFNVWZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rogram/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rogram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		762658222C7B7B8400CB4376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4WEEFNVWZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RogramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rogram.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rogram";
+			};
+			name = Debug;
+		};
+		762658232C7B7B8400CB4376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4WEEFNVWZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RogramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rogram.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rogram";
+			};
+			name = Release;
+		};
+		762658252C7B7B8400CB4376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4WEEFNVWZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RogramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Rogram;
+			};
+			name = Debug;
+		};
+		762658262C7B7B8400CB4376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4WEEFNVWZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RogramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Rogram;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		762657EF2C7B7B8300CB4376 /* Build configuration list for PBXProject "Rogram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7626581C2C7B7B8400CB4376 /* Debug */,
+				7626581D2C7B7B8400CB4376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7626581E2C7B7B8400CB4376 /* Build configuration list for PBXNativeTarget "Rogram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7626581F2C7B7B8400CB4376 /* Debug */,
+				762658202C7B7B8400CB4376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		762658212C7B7B8400CB4376 /* Build configuration list for PBXNativeTarget "RogramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				762658222C7B7B8400CB4376 /* Debug */,
+				762658232C7B7B8400CB4376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		762658242C7B7B8400CB4376 /* Build configuration list for PBXNativeTarget "RogramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				762658252C7B7B8400CB4376 /* Debug */,
+				762658262C7B7B8400CB4376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 762657EC2C7B7B8300CB4376 /* Project object */;
+}
