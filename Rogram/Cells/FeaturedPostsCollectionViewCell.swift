@@ -18,7 +18,7 @@ class FeaturedPostsCollectionViewCell: UICollectionViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .red
-        view.layer.cornerRadius = 18
+        view.layer.cornerRadius = 20
         return view
     }()
     

@@ -28,7 +28,7 @@ class FeaturedPostsLayout: UICollectionViewLayout {
         let numberOfItems = collectionView.numberOfItems(inSection: numberOfSections - 1)
         
         let horizontalInsets: CGFloat = 48
-        let verticalSpacing: CGFloat = 25
+        let verticalSpacing: CGFloat = 50
         var yOffset: CGFloat = 16
         let itemSize = CGSize(width: UIScreen.main.bounds.width - (horizontalInsets * 2), height: 400)
         
