@@ -20,7 +20,7 @@ class PhotoDetailAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        0.5
+        0.75
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -43,7 +43,7 @@ class PhotoDetailAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             
             containerView.addSubview(presentedView)
             
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.2, options: [.curveEaseOut]) {
+            UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.2, options: [.curveEaseOut]) {
                 presentedView.frame = endingFrame
                 presentedView.layer.cornerRadius = 18
             } completion: { _ in
