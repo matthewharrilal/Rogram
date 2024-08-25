@@ -69,6 +69,7 @@ private extension AlbumsViewController {
         }
     }
     
+    @MainActor
     func performBatchUpdates(indexPaths: inout [IndexPath], threshold: Int) {
         let indexPath = IndexPath(item: postsDataSource.count - 1, section: collectionView.numberOfSections - 1)
         indexPaths.append(indexPath)
