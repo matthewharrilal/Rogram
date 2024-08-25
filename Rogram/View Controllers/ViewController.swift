@@ -25,7 +25,8 @@ class AlbumsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         Task {
-            await postService.fetchPostObjects()
+            let results = await postService.fetchPostObjects()
+            await postService.streamAggregatedPosts(posts: results)
         }
     }
 }
