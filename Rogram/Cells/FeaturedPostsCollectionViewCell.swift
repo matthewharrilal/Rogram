@@ -17,9 +17,24 @@ class FeaturedPostsCollectionViewCell: UICollectionViewCell {
     private var containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .red
         view.layer.cornerRadius = 20
         return view
+    }()
+    
+    private var thumbnailImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 20
+        return imageView
+    }()
+    
+    private var titleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        return label
     }()
     
     override init(frame: CGRect) {
@@ -31,18 +46,34 @@ class FeaturedPostsCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func configure(post: AggregatedPost) {
+        thumbnailImageView.image = post.image
+        titleLabel.text = post.title
+    }
 }
 
 private extension FeaturedPostsCollectionViewCell {
     
     func setup() {
         contentView.addSubview(containerView)
+        containerView.addSubview(thumbnailImageView)
+        containerView.addSubview(titleLabel)
         
         NSLayoutConstraint.activate([
             containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor)
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            
+            thumbnailImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            thumbnailImageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            thumbnailImageView.topAnchor.constraint(equalTo: containerView.topAnchor),
+            
+            titleLabel.topAnchor.constraint(equalTo: thumbnailImageView.bottomAnchor, constant: 10),
+            titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 5),
+            titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -5),
+            titleLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
         ])
     }
 }

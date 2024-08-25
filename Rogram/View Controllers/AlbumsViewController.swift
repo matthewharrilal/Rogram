@@ -46,6 +46,7 @@ private extension AlbumsViewController {
     
     func setup() {
         view.addSubview(collectionView)
+        view.backgroundColor = .white
         
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -91,6 +92,7 @@ extension AlbumsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeaturedPostsCollectionViewCell.identifier, for: indexPath) as? FeaturedPostsCollectionViewCell else { return UICollectionViewCell() }
         
+        cell.configure(post: postsDataSource[indexPath.row])
         return cell
     }
 }
