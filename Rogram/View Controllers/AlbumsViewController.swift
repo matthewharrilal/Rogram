@@ -10,6 +10,7 @@ import UIKit
 class AlbumsViewController: UIViewController {
     
     private let postService: PostFetcherProtocol
+    private var postsDataSource: [AggregatedPost] = []
     
     private lazy var collectionView: UICollectionView = {
         let layout = FeaturedPostsLayout()
@@ -36,8 +37,7 @@ class AlbumsViewController: UIViewController {
         setup()
         
         Task {
-            let results = await postService.fetchPostObjects()
-            await postService.streamAggregatedPosts(posts: results)
+            await configureDataSource()
         }
     }
 }
@@ -54,12 +54,37 @@ private extension AlbumsViewController {
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
+    
+    func configureDataSource() async {
+        let results = await postService.fetchPostObjects()
+        let batchedThreshold: Int = 4
+        
+        if let stream = await postService.streamAggregatedPosts(posts: results) {
+            var batchedIndexPaths: [IndexPath] = []
+            
+            for await post in stream {
+                postsDataSource.append(post)
+                performBatchUpdates(indexPaths: &batchedIndexPaths, threshold: batchedThreshold)
+            }
+        }
+    }
+    
+    func performBatchUpdates(indexPaths: inout [IndexPath], threshold: Int) {
+        let indexPath = IndexPath(item: postsDataSource.count - 1, section: collectionView.numberOfSections - 1)
+        indexPaths.append(indexPath)
+        if indexPaths.count >= threshold {
+            collectionView.performBatchUpdates {
+                collectionView.insertItems(at: indexPaths)
+            }
+            indexPaths.removeAll()
+        }
+    }
 }
 
 extension AlbumsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        postsDataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
