@@ -19,6 +19,7 @@
 		7626582E2C7B7EB400CB4376 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626582D2C7B7EB400CB4376 /* Post.swift */; };
 		762658302C7B7F4400CB4376 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626582F2C7B7F4400CB4376 /* NetworkService.swift */; };
 		762658322C7B82EA00CB4376 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658312C7B82EA00CB4376 /* PostService.swift */; };
+		762658342C7B863900CB4376 /* AggregatedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658332C7B863900CB4376 /* AggregatedPost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7626582D2C7B7EB400CB4376 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		7626582F2C7B7F4400CB4376 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		762658312C7B82EA00CB4376 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		762658332C7B863900CB4376 /* AggregatedPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregatedPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				7626582D2C7B7EB400CB4376 /* Post.swift */,
+				762658332C7B863900CB4376 /* AggregatedPost.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				762658302C7B7F4400CB4376 /* NetworkService.swift in Sources */,
+				762658342C7B863900CB4376 /* AggregatedPost.swift in Sources */,
 				762658322C7B82EA00CB4376 /* PostService.swift in Sources */,
 				762657FC2C7B7B8300CB4376 /* ViewController.swift in Sources */,
 				762657F82C7B7B8300CB4376 /* AppDelegate.swift in Sources */,
