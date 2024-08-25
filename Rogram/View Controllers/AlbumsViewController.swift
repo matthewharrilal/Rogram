@@ -11,6 +11,8 @@ class AlbumsViewController: UIViewController {
     
     private let postService: PostFetcherProtocol
     private var postsDataSource: [AggregatedPost] = []
+    private lazy var photoTransitionDelegate = PhotoTransitionDelegate()
+    private lazy var photoDetailViewController = PhotoDetailViewController()
     
     private lazy var collectionView: UICollectionView = {
         let layout = FeaturedPostsLayout()
@@ -18,6 +20,7 @@ class AlbumsViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(FeaturedPostsCollectionViewCell.self, forCellWithReuseIdentifier: FeaturedPostsCollectionViewCell.identifier)
         collectionView.dataSource = self
+        collectionView.delegate = self
         return collectionView
     }()
     
@@ -94,5 +97,19 @@ extension AlbumsViewController: UICollectionViewDataSource {
         
         cell.configure(post: postsDataSource[indexPath.row])
         return cell
+    }
+}
+
+extension AlbumsViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? FeaturedPostsCollectionViewCell else { return }
+        
+        if let cellFrame = cell.superview?.convert(cell.frame, to: nil) {
+            photoTransitionDelegate.startingFrame = cellFrame
+            photoDetailViewController.transitioningDelegate = photoTransitionDelegate
+            photoDetailViewController.modalPresentationStyle = .custom
+            present(photoDetailViewController, animated: true)
+        }
     }
 }
