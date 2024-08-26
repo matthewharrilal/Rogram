@@ -11,13 +11,27 @@ import UIKit
 class ScalableContainerView: UIView {
     
     private var animator: UIViewPropertyAnimator?
+    public var onTap: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
+    convenience init(frame: CGRect, shouldAddHandler: Bool) {
+        self.init(frame: frame)
+        
+        if shouldAddHandler {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+            addGestureRecognizer(tapGesture)
+        }
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func handleTap() {
+        onTap?()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

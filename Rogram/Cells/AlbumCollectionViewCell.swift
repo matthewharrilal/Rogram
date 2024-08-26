@@ -15,9 +15,10 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     }
         
     private var containerView: ScalableContainerView = {
-        let view = ScalableContainerView()
+        let view = ScalableContainerView(frame: .zero, shouldAddHandler: false)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 18
+        view.backgroundColor = UIColor.colors.randomElement()
         return view
     }()
     
