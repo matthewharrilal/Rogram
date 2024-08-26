@@ -33,6 +33,7 @@ class FeaturedPostsCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.font = UIFont(name: "Poppins-Medium", size: 17)
         return label
     }()
     
