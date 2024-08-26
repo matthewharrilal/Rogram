@@ -20,8 +20,8 @@ class AlbumViewController: UIViewController {
         let view = ConfigurableHeaderView(frame: .zero, showDismissalButton: true, title: "Featured Album Photos")
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
-        view.onTap = {
-            self.dismiss(animated: true)
+        view.onTap = { [weak self] in
+            self?.dismiss(animated: true)
         }
         return view
     }()
@@ -119,7 +119,6 @@ extension AlbumViewController: UICollectionViewDataSource {
 
 extension AlbumViewController: UICollectionViewDelegate {
     
-    // MARK: TODO -> Fix presentation logic and make nicer
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard
             let cell = collectionView.cellForItem(at: indexPath) as? FeaturedPostsCollectionViewCell,

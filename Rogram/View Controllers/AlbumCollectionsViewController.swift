@@ -26,7 +26,7 @@ class AlbumCollectionsViewController: UIViewController {
     }()
     
     private lazy var collectionView: UICollectionView = {
-        let layout = AlbumCollectionsLayout(itemSize: itemSize, totalWidth: UIScreen.main.bounds.width)
+        let layout = AlbumCollectionsLayout(itemSize: itemSize)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(AlbumCollectionViewCell.self, forCellWithReuseIdentifier: AlbumCollectionViewCell.identifier)

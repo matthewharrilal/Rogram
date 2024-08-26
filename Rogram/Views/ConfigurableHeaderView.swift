@@ -13,7 +13,6 @@ class ConfigurableHeaderView: UIView {
     private let showDismissalButton: Bool
     private let title: String
     
-    // MARK: TODO -> Should these be weak references so they're not retained?
     public var onTap: (() -> Void)?
     
     private var containerView: UIView = {

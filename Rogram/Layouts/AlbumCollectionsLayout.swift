@@ -11,19 +11,15 @@ import UIKit
 class AlbumCollectionsLayout: UICollectionViewLayout {
     
     private let itemSize: CGSize
-    
-    // MARK: TODO -> We may be able to remove this and use contentWidth directly?
-    private let totalWidth: CGFloat
-    
+ 
     private var cache: [UICollectionViewLayoutAttributes] = []
     private var contentHeight: CGFloat = 0
     private var contentWidth: CGFloat {
         UIScreen.main.bounds.width
     }
     
-    init(itemSize: CGSize, totalWidth: CGFloat) {
+    init(itemSize: CGSize) {
         self.itemSize = itemSize
-        self.totalWidth = totalWidth
         super.init()
     }
     
@@ -46,7 +42,7 @@ class AlbumCollectionsLayout: UICollectionViewLayout {
         
         let numberOfItemsPerRow: CGFloat = 2
         
-        let availableWidth = totalWidth - ((numberOfItemsPerRow * itemSize.width) + spacing)
+        let availableWidth = contentWidth - ((numberOfItemsPerRow * itemSize.width) + spacing)
         var xOffset: CGFloat = availableWidth / 2
         
         for item in 0..<numberOfItems {

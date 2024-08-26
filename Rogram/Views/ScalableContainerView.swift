@@ -12,7 +12,6 @@ class ScalableContainerView: UIView {
     
     private var animator: UIViewPropertyAnimator?
     
-    // MARK: TODO -> Should these be weak references so they're not retained? 
     public var onTap: (() -> Void)?
     
     override init(frame: CGRect) {

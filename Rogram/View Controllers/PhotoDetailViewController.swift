@@ -23,8 +23,8 @@ class PhotoDetailViewController: UIViewController {
         let view = ConfigurableHeaderView(frame: .zero, showDismissalButton: true, title: "Album Photo Detailed")
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
-        view.onTap = {
-            self.dismiss(animated: true)
+        view.onTap = { [weak self] in
+            self?.dismiss(animated: true)
         }
         return view
     }()
