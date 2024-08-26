@@ -19,7 +19,7 @@ class AlbumCollectionsViewController: UIViewController {
     private let itemSize: CGSize = CGSize(width: 160, height: 250)
     
     private var headerView: ConfigurableHeaderView = {
-        let view = ConfigurableHeaderView(frame: .zero, title: "Album Collections")
+        let view = ConfigurableHeaderView(frame: .zero, title: "Album Collections, Tap One!")
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
         return view
