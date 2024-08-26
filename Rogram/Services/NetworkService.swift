@@ -27,24 +27,33 @@ class NetworkServiceImplementation: NetworkProtocol {
             let results = try JSONDecoder().decode(T.self, from: data)
             return results
         }
+        catch let dataError as URLError {
+            throw NetworkError.dataFetchError(dataError)
+        }
+        catch let decodingError as DecodingError {
+            throw NetworkError.decodingError(decodingError)
+        }
         catch {
-            print("Error decoding results")
-            return nil
+            throw error
         }
     }
     
-    func fetchImageForURL(_ urlString: String) async -> UIImage? {
-        // MARK: TODO -> Throw errors here
-        guard let url = URL(string: urlString) else { return nil }
+    func fetchImageForURL(_ urlString: String) async throws -> UIImage? {
+        guard let url = URL(string: urlString) else { throw NetworkError.invalidURL }
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             let image = UIImage(data: data)
             return image
         }
+        catch let dataError as URLError {
+            throw NetworkError.dataFetchError(dataError)
+        }
+        catch let decodingError as DecodingError {
+            throw NetworkError.decodingError(decodingError)
+        }
         catch {
-            print("Trouble fetching image")
-            return nil
+            throw error
         }
     }
 }

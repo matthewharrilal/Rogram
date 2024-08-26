@@ -37,6 +37,7 @@
 		767EB4A42C7CE081008524CF /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 767EB4A02C7CE081008524CF /* Poppins-Black.ttf */; };
 		767EB4A52C7CE081008524CF /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 767EB4A12C7CE081008524CF /* Poppins-ExtraBold.ttf */; };
 		767EB4A62C7CE081008524CF /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 767EB4A22C7CE081008524CF /* Poppins-SemiBold.ttf */; };
+		767EB4A82C7D1823008524CF /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4A72C7D1823008524CF /* NetworkErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		767EB4A02C7CE081008524CF /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
 		767EB4A12C7CE081008524CF /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		767EB4A22C7CE081008524CF /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		767EB4A72C7D1823008524CF /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				767EB49A2C7CC93B008524CF /* UIColor+Extension.swift */,
+				767EB4A72C7D1823008524CF /* NetworkErrors.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				762658322C7B82EA00CB4376 /* PostService.swift in Sources */,
 				767EB4882C7BEC40008524CF /* PhotoDetailViewController.swift in Sources */,
 				767EB48E2C7C2FA7008524CF /* AlbumCollectionsViewController.swift in Sources */,
+				767EB4A82C7D1823008524CF /* NetworkErrors.swift in Sources */,
 				762657FC2C7B7B8300CB4376 /* AlbumViewController.swift in Sources */,
 				762657F82C7B7B8300CB4376 /* AppDelegate.swift in Sources */,
 				762657FA2C7B7B8300CB4376 /* SceneDelegate.swift in Sources */,
