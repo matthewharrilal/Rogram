@@ -20,34 +20,47 @@ class PhotoDetailAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        0.5
+        return 0.5
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard
-            transitioningForward,
-            let destinationViewController = transitionContext.viewController(forKey: .to)
-        else { 
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-            return
-        }
-        
         let containerView = transitionContext.containerView
-        let presentedView = transitionContext.view(forKey: .to)
         
-        // Provided via the presentation controller
-        let endingFrame = transitionContext.finalFrame(for: destinationViewController)
-        
-        if let presentedView = presentedView {
+        if transitioningForward {
+            guard let destinationViewController = transitionContext.viewController(forKey: .to),
+                  let presentedView = transitionContext.view(forKey: .to) else {
+                transitionContext.completeTransition(false)
+                return
+            }
+            
+            let endingFrame = transitionContext.finalFrame(for: destinationViewController)
             presentedView.frame = startingFrame
             presentedView.layer.cornerRadius = 18
-            presentedView.layoutIfNeeded()
             containerView.addSubview(presentedView)
+            presentedView.layoutIfNeeded()
             
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0.0, options: [.curveEaseInOut]) {
                 presentedView.frame = endingFrame
-            } completion: { _ in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+                presentedView.layoutIfNeeded()
+            } completion: { completed in
+                transitionContext.completeTransition(completed)
+            }
+            
+        } else {
+            guard let sourceViewController = transitionContext.viewController(forKey: .from),
+                  let dismissedView = transitionContext.view(forKey: .from) else {
+                transitionContext.completeTransition(false)
+                return
+            }
+            
+            let endingFrame = startingFrame // Transition back to the starting frame
+            
+            UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0.0, options: [.curveEaseInOut]) {
+                dismissedView.frame = endingFrame
+                dismissedView.layoutIfNeeded()
+            } completion: { completed in
+                dismissedView.removeFromSuperview()
+                transitionContext.completeTransition(completed)
             }
         }
     }

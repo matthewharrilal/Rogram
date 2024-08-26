@@ -12,6 +12,9 @@ import UIKit
 class AlbumCollectionsViewController: UIViewController {
     
     private let albumService: AlbumFetcherProtocol
+    private let postService: PostFetcherProtocol
+    private lazy var transitionDelegate = PhotoTransitionDelegate()
+
     private var albumDataSource: [[Post]] = []
     private let itemSize: CGSize = CGSize(width: 160, height: 250)
     
