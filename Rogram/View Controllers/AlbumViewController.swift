@@ -16,6 +16,16 @@ class AlbumViewController: UIViewController {
     private lazy var photoTransitionDelegate = PhotoTransitionDelegate()
     private lazy var photoDetailViewController = PhotoDetailViewController()
     
+    private lazy var headerView: ConfigurableHeaderView = {
+        let view = ConfigurableHeaderView(frame: .zero, showDismissalButton: true, title: "Featured Album Photos")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        view.onTap = {
+            self.dismiss(animated: true)
+        }
+        return view
+    }()
+    
     private lazy var collectionView: UICollectionView = {
         let layout = FeaturedPostsLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -52,11 +62,17 @@ private extension AlbumViewController {
     
     func setup() {
         view.addSubview(collectionView)
+        view.addSubview(headerView)
         
         NSLayoutConstraint.activate([
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 100),
+            
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }

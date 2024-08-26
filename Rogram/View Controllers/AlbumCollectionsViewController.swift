@@ -18,6 +18,13 @@ class AlbumCollectionsViewController: UIViewController {
     private var albumDataSource: [[Post]] = []
     private let itemSize: CGSize = CGSize(width: 160, height: 250)
     
+    private var headerView: ConfigurableHeaderView = {
+        let view = ConfigurableHeaderView(frame: .zero, title: "Album Collections")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        return view
+    }()
+    
     private lazy var collectionView: UICollectionView = {
         let layout = AlbumCollectionsLayout(itemSize: itemSize, totalWidth: UIScreen.main.bounds.width)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -56,14 +63,20 @@ class AlbumCollectionsViewController: UIViewController {
 private extension AlbumCollectionsViewController {
     
     func setup() {
+        view.addSubview(headerView)
         view.addSubview(collectionView)
         view.backgroundColor = .white
         
         NSLayoutConstraint.activate([
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 100),
+            
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
+            collectionView.topAnchor.constraint(equalTo: headerView.bottomAnchor)
         ])
     }
     
