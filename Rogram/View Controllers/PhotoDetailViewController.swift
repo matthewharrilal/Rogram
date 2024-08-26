@@ -19,6 +19,16 @@ class PhotoDetailViewController: UIViewController {
         }
     }
     
+    private lazy var headerView: ConfigurableHeaderView = {
+        let view = ConfigurableHeaderView(frame: .zero, showDismissalButton: true, title: "Album Photo Detailed")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        view.onTap = {
+            self.dismiss(animated: true)
+        }
+        return view
+    }()
+    
     private var photoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -39,7 +49,6 @@ class PhotoDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
         setup()
     }
 }
@@ -47,17 +56,24 @@ class PhotoDetailViewController: UIViewController {
 private extension PhotoDetailViewController {
     
     func setup() {
+        view.addSubview(headerView)
         view.addSubview(photoImageView)
         view.addSubview(titleLabel)
+        view.backgroundColor = .white
         
         NSLayoutConstraint.activate([
-            photoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 25),
+            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 100),
+            
+            photoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             photoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             photoImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            photoImageView.heightAnchor.constraint(equalToConstant: 250),
-            photoImageView.widthAnchor.constraint(equalToConstant: 250),
+            photoImageView.heightAnchor.constraint(equalToConstant: 350),
+            photoImageView.widthAnchor.constraint(equalToConstant: 350),
             
-            titleLabel.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 25),
+            titleLabel.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 50),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             titleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 35),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),

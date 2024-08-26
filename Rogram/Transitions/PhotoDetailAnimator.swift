@@ -59,6 +59,7 @@ class PhotoDetailAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             // First keyframe: Animate the main view to its final position with a spring effect
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.6) {
                 presentedView.frame = endingFrame
+                presentedView.backgroundColor = .white
                 presentedView.layoutIfNeeded()
             }
             
@@ -101,6 +102,7 @@ class PhotoDetailAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             // Second keyframe: Animate the main view back to its original frame with a spring effect
             UIView.addKeyframe(withRelativeStartTime: 0.4, relativeDuration: 0.6) {
                 dismissedView.frame = endingFrame
+                dismissedView.backgroundColor = .clear
                 dismissedView.layoutIfNeeded()
             }
             
