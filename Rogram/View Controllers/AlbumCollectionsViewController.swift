@@ -8,7 +8,11 @@
 import Foundation
 import UIKit
 
+// MARK: TODO -> Rename this graph of dependencies and it's naming
 class AlbumCollectionsViewController: UIViewController {
+    
+    private let albumService: AlbumFetcherProtocol
+    private var albumDataSource: [[Post]] = [[]]
     
     private lazy var collectionView: UICollectionView = {
         let layout = AlbumCollectionsLayout()
@@ -18,11 +22,24 @@ class AlbumCollectionsViewController: UIViewController {
         collectionView.dataSource = self
         return collectionView
     }()
-
+    
+    init(albumService: AlbumFetcherProtocol) {
+        self.albumService = albumService
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setup()
+        
+        Task {
+            await configureDataSource()
+        }
     }
 }
 
@@ -38,12 +55,36 @@ private extension AlbumCollectionsViewController {
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
         ])
     }
+    
+    func configureDataSource() async {
+        var batchedIndexPaths: [IndexPath] = []
+        let batchedThreshold: Int = 3
+
+        for await album in await albumService.fetchAlbumCollections() {
+            if let album = album {
+                albumDataSource.append(album)
+                performBatchUpdates(indexPaths: &batchedIndexPaths, threshold: batchedThreshold)
+            }
+        }
+    }
+    
+    @MainActor
+    func performBatchUpdates(indexPaths: inout [IndexPath], threshold: Int) {
+        let indexPath = IndexPath(item: albumDataSource.count - 1, section: collectionView.numberOfSections - 1)
+        indexPaths.append(indexPath)
+        if indexPaths.count >= threshold {
+            collectionView.performBatchUpdates {
+                collectionView.insertItems(at: indexPaths)
+            }
+            indexPaths.removeAll()
+        }
+    }
 }
 
 extension AlbumCollectionsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        albumDataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
