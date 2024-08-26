@@ -32,6 +32,7 @@
 		767EB4942C7C3BD1008524CF /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4932C7C3BD1008524CF /* AlbumService.swift */; };
 		767EB4982C7CC8BB008524CF /* ScalableContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4972C7CC8BB008524CF /* ScalableContainerView.swift */; };
 		767EB49B2C7CC93B008524CF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB49A2C7CC93B008524CF /* UIColor+Extension.swift */; };
+		767EB49D2C7CCE03008524CF /* ConfigurableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB49C2C7CCE03008524CF /* ConfigurableHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		767EB4932C7C3BD1008524CF /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
 		767EB4972C7CC8BB008524CF /* ScalableContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalableContainerView.swift; sourceTree = "<group>"; };
 		767EB49A2C7CC93B008524CF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		767EB49C2C7CCE03008524CF /* ConfigurableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				767EB4972C7CC8BB008524CF /* ScalableContainerView.swift */,
+				767EB49C2C7CCE03008524CF /* ConfigurableHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				762658302C7B7F4400CB4376 /* NetworkService.swift in Sources */,
 				762658342C7B863900CB4376 /* AggregatedPost.swift in Sources */,
 				762658392C7B912700CB4376 /* FeaturedPostsCollectionViewCell.swift in Sources */,
+				767EB49D2C7CCE03008524CF /* ConfigurableHeaderView.swift in Sources */,
 				767EB48C2C7BEDCE008524CF /* PhotoDetailPresentationController.swift in Sources */,
 				762658322C7B82EA00CB4376 /* PostService.swift in Sources */,
 				767EB4882C7BEC40008524CF /* PhotoDetailViewController.swift in Sources */,
