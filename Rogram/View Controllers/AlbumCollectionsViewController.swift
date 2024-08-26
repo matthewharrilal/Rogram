@@ -21,11 +21,13 @@ class AlbumCollectionsViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(AlbumCollectionViewCell.self, forCellWithReuseIdentifier: AlbumCollectionViewCell.identifier)
         collectionView.dataSource = self
+        collectionView.delegate = self
         return collectionView
     }()
     
-    init(albumService: AlbumFetcherProtocol) {
+    init(albumService: AlbumFetcherProtocol, postService: PostFetcherProtocol) {
         self.albumService = albumService
+        self.postService = postService
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -104,7 +106,27 @@ extension AlbumCollectionsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCollectionViewCell.identifier, for: indexPath) as? AlbumCollectionViewCell else { return UICollectionViewCell() }
         
-        cell.posts = albumDataSource[indexPath.row]
+        cell.configure(containerColor: colorForIndexPath(indexPath.item))
         return cell
+    }
+}
+
+extension AlbumCollectionsViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard
+            let cell = collectionView.cellForItem(at: indexPath) as? AlbumCollectionViewCell,
+            let cellFrame = cell.superview?.convert(cell.frame, to: nil)
+        else { return }
+        
+        let albumViewController = AlbumViewController(
+            postService: postService,
+            posts: albumDataSource[indexPath.row]
+        )
+        
+        transitionDelegate.startingFrame = cellFrame
+        albumViewController.transitioningDelegate = transitionDelegate
+        albumViewController.modalPresentationStyle = .custom
+        present(albumViewController, animated: true)
     }
 }

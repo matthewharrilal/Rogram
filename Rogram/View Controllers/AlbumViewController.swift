@@ -10,6 +10,8 @@ import UIKit
 class AlbumViewController: UIViewController {
     
     private let postService: PostFetcherProtocol
+    private let posts: [Post]
+    
     private var postsDataSource: [AggregatedPost] = []
     private lazy var photoTransitionDelegate = PhotoTransitionDelegate()
     private lazy var photoDetailViewController = PhotoDetailViewController()
@@ -24,8 +26,9 @@ class AlbumViewController: UIViewController {
         return collectionView
     }()
     
-    init(postService: PostFetcherProtocol) {
+    init(postService: PostFetcherProtocol, posts: [Post]) {
         self.postService = postService
+        self.posts = posts
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -59,10 +62,9 @@ private extension AlbumViewController {
     }
     
     func configureDataSource() async {
-        let results = await postService.fetchPostObjects()
         let batchedThreshold: Int = 4
         
-        if let stream = await postService.streamAggregatedPosts(posts: results) {
+        if let stream = await postService.streamAggregatedPosts(posts: posts) {
             var batchedIndexPaths: [IndexPath] = []
             
             for await post in stream {
