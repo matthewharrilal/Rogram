@@ -29,6 +29,7 @@
 		767EB48E2C7C2FA7008524CF /* AlbumCollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB48D2C7C2FA7008524CF /* AlbumCollectionsViewController.swift */; };
 		767EB4902C7C3060008524CF /* AlbumCollectionsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB48F2C7C3060008524CF /* AlbumCollectionsLayout.swift */; };
 		767EB4922C7C364A008524CF /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4912C7C364A008524CF /* AlbumCollectionViewCell.swift */; };
+		767EB4942C7C3BD1008524CF /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4932C7C3BD1008524CF /* AlbumService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		767EB48D2C7C2FA7008524CF /* AlbumCollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionsViewController.swift; sourceTree = "<group>"; };
 		767EB48F2C7C3060008524CF /* AlbumCollectionsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionsLayout.swift; sourceTree = "<group>"; };
 		767EB4912C7C364A008524CF /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		767EB4932C7C3BD1008524CF /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			children = (
 				7626582F2C7B7F4400CB4376 /* NetworkService.swift */,
 				762658312C7B82EA00CB4376 /* PostService.swift */,
+				767EB4932C7C3BD1008524CF /* AlbumService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				762657FA2C7B7B8300CB4376 /* SceneDelegate.swift in Sources */,
 				762658372C7B8E0000CB4376 /* FeaturedPostsLayout.swift in Sources */,
 				767EB4902C7C3060008524CF /* AlbumCollectionsLayout.swift in Sources */,
+				767EB4942C7C3BD1008524CF /* AlbumService.swift in Sources */,
 				7626582E2C7B7EB400CB4376 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
