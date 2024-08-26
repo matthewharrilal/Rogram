@@ -26,10 +26,12 @@ class PostFetcherImplementation: PostFetcherProtocol {
         self.networkService = networkService
     }
     
+    // MARK: TODO -> Can we remove this since album # is dyanmic alongside Constants.urlString
     func fetchPostObjects() async -> [Post]? {
         return await networkService.executeRequest(urlString: Constants.urlString)
     }
     
+    // MARK: TODO -> Clean up this method
     func fetchAlbumCollections() async -> AsyncStream<[Post]?> {
         AsyncStream<[Post]?> { [weak self] continuation in
             guard let self = self else { return }
@@ -37,7 +39,7 @@ class PostFetcherImplementation: PostFetcherProtocol {
                 await withTaskGroup(of: [Post]?.self) { taskGroup in
                     for counter in 0..<10 {
                         taskGroup.addTask {
-                            var urlString = "https://jsonplaceholder.typicode.com/album/\(counter)/photos"
+                            let urlString = "https://jsonplaceholder.typicode.com/album/\(counter)/photos"
                             print(urlString)
                             return await self.networkService.executeRequest(urlString: urlString)
                         }
@@ -53,6 +55,7 @@ class PostFetcherImplementation: PostFetcherProtocol {
         }
     }
     
+    // MARK: TODO -> Clean up this method
     func streamAggregatedPosts(posts: [Post]?) async -> AsyncStream<AggregatedPost>? {
         // MARK: TODO -> Throw errors
         guard let posts = posts else { return nil }
