@@ -103,14 +103,6 @@ private extension AlbumCollectionsViewController {
             indexPaths.removeAll()
         }
     }
-    
-    func colorForIndexPath(_ item: Int) -> UIColor {
-        if item < UIColor.colors.count {
-            return UIColor.colors[item]
-        } else {
-            return UIColor.colors[item % UIColor.colors.count]
-        }
-    }
 }
 
 extension AlbumCollectionsViewController: UICollectionViewDataSource {
@@ -122,7 +114,6 @@ extension AlbumCollectionsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCollectionViewCell.identifier, for: indexPath) as? AlbumCollectionViewCell else { return UICollectionViewCell() }
         
-        cell.configure(containerColor: colorForIndexPath(indexPath.item))
         return cell
     }
 }

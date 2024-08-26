@@ -121,14 +121,17 @@ extension AlbumViewController: UICollectionViewDelegate {
     
     // MARK: TODO -> Fix presentation logic and make nicer
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? FeaturedPostsCollectionViewCell else { return }
+        guard
+            let cell = collectionView.cellForItem(at: indexPath) as? FeaturedPostsCollectionViewCell,
+            let cellFrame = cell.superview?.convert(cell.frame, to: nil)
+        else { return }
         
         photoDetailViewController.post = postsDataSource[indexPath.row]
-        if let cellFrame = cell.superview?.convert(cell.frame, to: nil) {
-            photoTransitionDelegate.startingFrame = cellFrame
-            photoDetailViewController.transitioningDelegate = photoTransitionDelegate
-            photoDetailViewController.modalPresentationStyle = .custom
-            present(photoDetailViewController, animated: true)
-        }
+        
+        photoTransitionDelegate.startingFrame = cellFrame
+        photoDetailViewController.transitioningDelegate = photoTransitionDelegate
+        photoDetailViewController.modalPresentationStyle = .custom
+        present(photoDetailViewController, animated: true)
+        
     }
 }

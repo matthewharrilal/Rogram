@@ -54,8 +54,10 @@ class PhotoDetailAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             }
             
             let endingFrame = startingFrame // Transition back to the starting frame
+            dismissedView.layoutIfNeeded()
             
             UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0.0, options: [.curveEaseInOut]) {
+                dismissedView.alpha = 0
                 dismissedView.frame = endingFrame
                 dismissedView.layoutIfNeeded()
             } completion: { completed in
