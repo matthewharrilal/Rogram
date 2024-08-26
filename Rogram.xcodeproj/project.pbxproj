@@ -30,6 +30,7 @@
 		767EB4902C7C3060008524CF /* AlbumCollectionsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB48F2C7C3060008524CF /* AlbumCollectionsLayout.swift */; };
 		767EB4922C7C364A008524CF /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4912C7C364A008524CF /* AlbumCollectionViewCell.swift */; };
 		767EB4942C7C3BD1008524CF /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4932C7C3BD1008524CF /* AlbumService.swift */; };
+		767EB4962C7C4678008524CF /* NestedAlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4952C7C4678008524CF /* NestedAlbumCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		767EB48F2C7C3060008524CF /* AlbumCollectionsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionsLayout.swift; sourceTree = "<group>"; };
 		767EB4912C7C364A008524CF /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		767EB4932C7C3BD1008524CF /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		767EB4952C7C4678008524CF /* NestedAlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedAlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			children = (
 				762658382C7B912700CB4376 /* FeaturedPostsCollectionViewCell.swift */,
 				767EB4912C7C364A008524CF /* AlbumCollectionViewCell.swift */,
+				767EB4952C7C4678008524CF /* NestedAlbumCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				767EB48C2C7BEDCE008524CF /* PhotoDetailPresentationController.swift in Sources */,
 				762658322C7B82EA00CB4376 /* PostService.swift in Sources */,
 				767EB4882C7BEC40008524CF /* PhotoDetailViewController.swift in Sources */,
+				767EB4962C7C4678008524CF /* NestedAlbumCollectionViewCell.swift in Sources */,
 				767EB48E2C7C2FA7008524CF /* AlbumCollectionsViewController.swift in Sources */,
 				762657FC2C7B7B8300CB4376 /* AlbumViewController.swift in Sources */,
 				762657F82C7B7B8300CB4376 /* AppDelegate.swift in Sources */,

@@ -12,10 +12,11 @@ import UIKit
 class AlbumCollectionsViewController: UIViewController {
     
     private let albumService: AlbumFetcherProtocol
-    private var albumDataSource: [[Post]] = [[]]
+    private var albumDataSource: [[Post]] = []
+    private let itemSize: CGSize = CGSize(width: 160, height: 250)
     
     private lazy var collectionView: UICollectionView = {
-        let layout = AlbumCollectionsLayout()
+        let layout = AlbumCollectionsLayout(itemSize: itemSize, totalWidth: UIScreen.main.bounds.width)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(AlbumCollectionViewCell.self, forCellWithReuseIdentifier: AlbumCollectionViewCell.identifier)
@@ -36,6 +37,10 @@ class AlbumCollectionsViewController: UIViewController {
         super.viewDidLoad()
         
         setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         Task {
             await configureDataSource()
@@ -90,6 +95,7 @@ extension AlbumCollectionsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCollectionViewCell.identifier, for: indexPath) as? AlbumCollectionViewCell else { return UICollectionViewCell() }
         
+        cell.posts = albumDataSource[indexPath.row]
         return cell
     }
 }

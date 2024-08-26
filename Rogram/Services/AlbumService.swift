@@ -26,7 +26,7 @@ class AlbumFetcherService: AlbumFetcherProtocol {
             guard let self = self else { return }
             Task {
                 await withTaskGroup(of: [Post]?.self) { taskGroup in
-                    for counter in 0..<10 {
+                    for counter in 1..<11 {
                         taskGroup.addTask {
                             let urlString = "https://jsonplaceholder.typicode.com/album/\(counter)/photos"
                             print(urlString)
