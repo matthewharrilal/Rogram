@@ -52,6 +52,7 @@ private extension AlbumCollectionsViewController {
     
     func setup() {
         view.addSubview(collectionView)
+        view.backgroundColor = .white
         
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -82,6 +83,14 @@ private extension AlbumCollectionsViewController {
                 collectionView.insertItems(at: indexPaths)
             }
             indexPaths.removeAll()
+        }
+    }
+    
+    func colorForIndexPath(_ item: Int) -> UIColor {
+        if item < UIColor.colors.count {
+            return UIColor.colors[item]
+        } else {
+            return UIColor.colors[item % UIColor.colors.count]
         }
     }
 }

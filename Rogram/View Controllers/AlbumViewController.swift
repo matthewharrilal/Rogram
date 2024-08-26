@@ -49,7 +49,6 @@ private extension AlbumViewController {
     
     func setup() {
         view.addSubview(collectionView)
-        view.backgroundColor = .white
         
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

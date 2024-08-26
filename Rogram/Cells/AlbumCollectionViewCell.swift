@@ -54,16 +54,8 @@ class AlbumCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func updateContentOffset() {
-        let offsetY = nestedCollectionView.contentOffset.y + 0.25
-        let visibleHeight = nestedCollectionView.bounds.height
-        nestedCollectionView.contentOffset = CGPoint(x: 0, y: offsetY)
-        
-        if offsetY >= nestedCollectionView.contentSize.height - (visibleHeight - 50) {
-            UIView.animate(withDuration: 0.25) { [weak self] in
-                self?.nestedCollectionView.contentOffset = CGPoint(x: 0, y: 0)
-            }
-        }
+    func configure(containerColor: UIColor) {
+        containerView.backgroundColor = containerColor
     }
 }
 
