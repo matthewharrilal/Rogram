@@ -9,17 +9,15 @@ import Foundation
 import UIKit
 
 protocol NetworkProtocol: AnyObject {
-    func executeRequest<T>(urlString: String) async -> T? where T: Decodable
-    func fetchImageForURL(_ urlString: String) async -> UIImage?
+    func executeRequest<T>(urlString: String) async throws -> T? where T: Decodable
+    func fetchImageForURL(_ urlString: String) async throws -> UIImage?
 }
 
 class NetworkServiceImplementation: NetworkProtocol {
     
-    func executeRequest<T>(urlString: String) async -> T? where T : Decodable {
-        // MARK: TODO -> Throw specific errors here
+    func executeRequest<T>(urlString: String) async throws -> T? where T : Decodable {
         guard let url = URL(string: urlString) else {
-            print("Error creating URL Request from URL")
-            return nil
+            throw NetworkError.invalidURL
         }
         
         do {
