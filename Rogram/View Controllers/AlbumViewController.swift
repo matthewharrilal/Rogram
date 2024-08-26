@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlbumsViewController: UIViewController {
+class AlbumViewController: UIViewController {
     
     private let postService: PostFetcherProtocol
     private var postsDataSource: [AggregatedPost] = []
@@ -45,7 +45,7 @@ class AlbumsViewController: UIViewController {
     }
 }
 
-private extension AlbumsViewController {
+private extension AlbumViewController {
     
     func setup() {
         view.addSubview(collectionView)
@@ -86,7 +86,7 @@ private extension AlbumsViewController {
     }
 }
 
-extension AlbumsViewController: UICollectionViewDataSource {
+extension AlbumViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         postsDataSource.count
@@ -100,8 +100,9 @@ extension AlbumsViewController: UICollectionViewDataSource {
     }
 }
 
-extension AlbumsViewController: UICollectionViewDelegate {
+extension AlbumViewController: UICollectionViewDelegate {
     
+    // MARK: TODO -> Fix presentation logic and make nicer
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? FeaturedPostsCollectionViewCell else { return }
         

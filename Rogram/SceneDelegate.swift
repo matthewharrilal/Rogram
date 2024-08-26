@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let networkServiceImplementation = NetworkServiceImplementation()
         let postFetcherImplementation = PostFetcherImplementation(networkService: networkServiceImplementation)
-        window?.rootViewController = AlbumsViewController(postService: postFetcherImplementation)
+        window?.rootViewController = AlbumViewController(postService: postFetcherImplementation)
         window?.makeKeyAndVisible()
     }
 
