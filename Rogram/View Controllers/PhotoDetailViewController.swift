@@ -32,6 +32,7 @@ class PhotoDetailViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.font = UIFont(name: "Poppins-Black", size: 22)
         return label
     }()
     
@@ -58,7 +59,9 @@ private extension PhotoDetailViewController {
             
             titleLabel.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 25),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            titleLabel.heightAnchor.constraint(equalToConstant: 35)
+            titleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 35),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
     }
 }

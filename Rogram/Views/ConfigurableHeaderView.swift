@@ -13,6 +13,7 @@ class ConfigurableHeaderView: UIView {
     private let showDismissalButton: Bool
     private let title: String
     
+    // MARK: TODO -> Should these be weak references so they're not retained?
     public var onTap: (() -> Void)?
     
     private var containerView: UIView = {
@@ -27,13 +28,14 @@ class ConfigurableHeaderView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.font = UIFont(name: "Poppins-ExtraBold", size: 22)
         return label
     }()
     
     private lazy var dismissalButton: ScalableContainerView = {
         let view = ScalableContainerView(frame: .zero, shouldAddHandler: true)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 25
+        view.layer.cornerRadius = 16
         view.backgroundColor = .red
         view.onTap = { [weak self] in
             self?.onTap?()
@@ -91,8 +93,8 @@ private extension ConfigurableHeaderView {
         NSLayoutConstraint.activate([
             dismissalButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
             dismissalButton.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
-            dismissalButton.heightAnchor.constraint(equalToConstant: 50),
-            dismissalButton.widthAnchor.constraint(equalToConstant: 50)
+            dismissalButton.heightAnchor.constraint(equalToConstant: 32),
+            dismissalButton.widthAnchor.constraint(equalToConstant: 32)
         ])
     }
 }
