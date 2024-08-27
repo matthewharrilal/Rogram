@@ -1,4 +1,3 @@
-Sure! Here's the updated README with a placeholder for a video demo:
 
 ---
 
