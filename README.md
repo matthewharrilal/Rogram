@@ -1,9 +1,14 @@
+Sure! Here's the updated README with a placeholder for a video demo:
 
 ---
 
 # Rogram: An Elegant Home Feed Experience
 
 **Rogram** is an iOS application designed as an interview challenge for Ro, aimed at implementing a basic version of their home screen feed. However, this challenge has been extended to showcase advanced iOS development techniques, including custom transitions, networking, and UI layouts.
+
+[![Rogram Video Demo](https://jmp.sh/GTTSi0iT)
+*Click the image above to watch the video demo*
+
 
 ## 🌟 Features
 
@@ -66,8 +71,6 @@ Rogram’s layouts are thoughtfully designed to provide an engaging and user-fri
 - **FeaturedPostsLayout.swift**: A standard vertical layout to showcase images and their corresponding titles.
 - **AlbumCollectionsLayout.swift**: A Pinterest-inspired layout featuring vertical, side-by-side columns.
 
-![Sample Layout](https://via.placeholder.com/600x400)  *(Insert a screenshot of the layout here)*
-
 **Future Enhancement**: Implement thumbnail previews for albums instead of random color assortments, enhancing the visual coherence and user experience.
 
 ### Custom Presentations: Elevating Transitions
@@ -128,4 +131,5 @@ Rogram includes a suite of unit and integration tests to ensure the stability an
 - **Thumbnail Previews**: Implement thumbnail images for albums.
 - **Pagination**: Add pagination for album collections, allowing users to load more albums with a "Show More" button.
 - **Refined Animations**: Continue to refine and enhance the custom animations for an even smoother user experience.
+
 ---
