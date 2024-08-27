@@ -6,7 +6,7 @@ Sure! Here's the updated README with a placeholder for a video demo:
 
 **Rogram** is an iOS application designed as an interview challenge for Ro, aimed at implementing a basic version of their home screen feed. However, this challenge has been extended to showcase advanced iOS development techniques, including custom transitions, networking, and UI layouts.
 
-[![Rogram Video Demo]([https://jmp.sh/GTTSi0iT](https://github.com/user-attachments/assets/60d370bd-4cfb-4be2-8d04-2dc6f094d3a0))
+[![Rogram Video Demo](https://github.com/user-attachments/assets/60d370bd-4cfb-4be2-8d04-2dc6f094d3a0)
 *Click the image above to watch the video demo*
 *Please compile natively for full resolution, compression degrades quality!*
 
