@@ -9,7 +9,16 @@ import Foundation
 import UIKit
 
 protocol NetworkProtocol: AnyObject {
+    /// Executes a network request and decodes the response into a specified type.
+    /// - Parameter urlString: The URL string for the network request.
+    /// - Returns: The decoded response of type `T`.
+    /// - Throws: `NetworkError` if the URL is invalid, data fetching fails, or decoding fails.
     func executeRequest<T>(urlString: String) async throws -> T? where T: Decodable
+    
+    /// Fetches an image from a given URL.
+    /// - Parameter urlString: The URL string for the image.
+    /// - Returns: The fetched `UIImage`.
+    /// - Throws: `NetworkError` if the URL is invalid, data fetching fails, or decoding fails.
     func fetchImageForURL(_ urlString: String) async throws -> UIImage?
 }
 

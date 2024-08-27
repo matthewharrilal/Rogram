@@ -8,6 +8,9 @@
 import Foundation
 
 protocol PostFetcherProtocol: AnyObject {
+    /// Streams aggregated posts for the given array of `Post` objects.
+    /// - Parameter posts: The array of `Post` objects to be processed.
+    /// - Returns: An `AsyncStream` of `AggregatedPost` objects.
     func streamAggregatedPosts(posts: [Post]?) async -> AsyncStream<AggregatedPost>?
 }
 
@@ -26,9 +29,11 @@ class PostFetcherImplementation: PostFetcherProtocol {
         return AsyncStream<AggregatedPost> { [weak self] continuation in
             guard let self = self else { return }
             Task {
+                // Create a throwing task group to process each post concurrently
                 try await withThrowingTaskGroup(of: AggregatedPost?.self) { taskGroup in
                     self.addTasksToTaskGroup(posts: posts, &taskGroup)
                     
+                    // Iterate over the completed tasks and yield the results
                     for try await aggregatedPost in taskGroup {
                         if let aggregatedPost = aggregatedPost {
                             continuation.yield(aggregatedPost)
@@ -43,7 +48,11 @@ class PostFetcherImplementation: PostFetcherProtocol {
 }
 
 private extension PostFetcherImplementation {
-
+    
+    /// Adds tasks to the task group for processing each post.
+    /// - Parameters:
+    ///   - posts: The array of `Post` objects to be processed.
+    ///   - taskGroup: The task group to which tasks are added.
     func addTasksToTaskGroup(posts: [Post],  _ taskGroup: inout ThrowingTaskGroup<AggregatedPost?, Error>) {
         for post in posts {
             taskGroup.addTask {
@@ -52,6 +61,9 @@ private extension PostFetcherImplementation {
         }
     }
     
+    /// Processes a single `Post` and returns an `AggregatedPost`.
+    /// - Parameter post: The `Post` object to be processed.
+    /// - Returns: An `AggregatedPost` object if successful, or `nil` if there was an error.
     func processAggregatedPost(post: Post) async -> AggregatedPost? {
         do {
             let image = try await self.networkService.fetchImageForURL(post.thumbnailUrl)
