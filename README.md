@@ -1,4 +1,3 @@
-Here's the entire README formatted using markdown:
 
 ---
 
@@ -129,15 +128,4 @@ Rogram includes a suite of unit and integration tests to ensure the stability an
 - **Thumbnail Previews**: Implement thumbnail images for albums.
 - **Pagination**: Add pagination for album collections, allowing users to load more albums with a "Show More" button.
 - **Refined Animations**: Continue to refine and enhance the custom animations for an even smoother user experience.
-
-## 🤝 Contributing
-
-Contributions are welcome! Follow these steps:
-
-1. **Fork the repository**.
-2. **Create a new branch**: `git checkout -b feature/your-feature-name`.
-3. **Make your changes**.
-4. **Commit your changes**: `git commit -m 'Add some feature'`.
-5. **Push to the branch**: `git push origin feature/your-feature-name`.
-6. **Submit a pull request**.
 ---
