@@ -31,7 +31,7 @@ Rogram/
 
 ### Services: Powering Networking
 
-Rogram’s networking layer is both robust and flexible, making use of dependency injection for ease of testing and extension.
+Rogram’s networking layer is making use of dependency injection for ease of testing and extension.
 
 - **NetworkService.swift**: Implements the `NetworkProtocol`, providing the foundation for executing network requests.
 - **PostService.swift**: Injects `NetworkService` to fetch posts for specific album routes (`/album/1/photos`, `/album/2/photos`, etc.).
