@@ -13,7 +13,6 @@
 		762657FF2C7B7B8300CB4376 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762657FD2C7B7B8300CB4376 /* Main.storyboard */; };
 		762658012C7B7B8400CB4376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762658002C7B7B8400CB4376 /* Assets.xcassets */; };
 		762658042C7B7B8400CB4376 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762658022C7B7B8400CB4376 /* LaunchScreen.storyboard */; };
-		7626580F2C7B7B8400CB4376 /* RogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626580E2C7B7B8400CB4376 /* RogramTests.swift */; };
 		762658192C7B7B8400CB4376 /* RogramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762658182C7B7B8400CB4376 /* RogramUITests.swift */; };
 		7626581B2C7B7B8400CB4376 /* RogramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626581A2C7B7B8400CB4376 /* RogramUITestsLaunchTests.swift */; };
 		7626582E2C7B7EB400CB4376 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626582D2C7B7EB400CB4376 /* Post.swift */; };
@@ -38,6 +37,10 @@
 		767EB4A52C7CE081008524CF /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 767EB4A12C7CE081008524CF /* Poppins-ExtraBold.ttf */; };
 		767EB4A62C7CE081008524CF /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 767EB4A22C7CE081008524CF /* Poppins-SemiBold.ttf */; };
 		767EB4A82C7D1823008524CF /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4A72C7D1823008524CF /* NetworkErrors.swift */; };
+		767EB4AA2C7D54DF008524CF /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4A92C7D54DF008524CF /* MockNetworkService.swift */; };
+		767EB4AC2C7D5552008524CF /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4AB2C7D5552008524CF /* NetworkServiceTests.swift */; };
+		767EB4AE2C7D6A02008524CF /* PostFetcherImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4AD2C7D6A02008524CF /* PostFetcherImplementationTests.swift */; };
+		767EB4B02C7D6A7E008524CF /* AlbumFetcherServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767EB4AF2C7D6A7E008524CF /* AlbumFetcherServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +70,6 @@
 		762658032C7B7B8400CB4376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		762658052C7B7B8400CB4376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7626580A2C7B7B8400CB4376 /* RogramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RogramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7626580E2C7B7B8400CB4376 /* RogramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogramTests.swift; sourceTree = "<group>"; };
 		762658142C7B7B8400CB4376 /* RogramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RogramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		762658182C7B7B8400CB4376 /* RogramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogramUITests.swift; sourceTree = "<group>"; };
 		7626581A2C7B7B8400CB4376 /* RogramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogramUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -93,6 +95,10 @@
 		767EB4A12C7CE081008524CF /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		767EB4A22C7CE081008524CF /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		767EB4A72C7D1823008524CF /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		767EB4A92C7D54DF008524CF /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		767EB4AB2C7D5552008524CF /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		767EB4AD2C7D6A02008524CF /* PostFetcherImplementationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFetcherImplementationTests.swift; sourceTree = "<group>"; };
+		767EB4AF2C7D6A7E008524CF /* AlbumFetcherServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumFetcherServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +171,10 @@
 		7626580D2C7B7B8400CB4376 /* RogramTests */ = {
 			isa = PBXGroup;
 			children = (
-				7626580E2C7B7B8400CB4376 /* RogramTests.swift */,
+				767EB4A92C7D54DF008524CF /* MockNetworkService.swift */,
+				767EB4AB2C7D5552008524CF /* NetworkServiceTests.swift */,
+				767EB4AD2C7D6A02008524CF /* PostFetcherImplementationTests.swift */,
+				767EB4AF2C7D6A7E008524CF /* AlbumFetcherServiceTests.swift */,
 			);
 			path = RogramTests;
 			sourceTree = "<group>";
@@ -428,7 +437,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7626580F2C7B7B8400CB4376 /* RogramTests.swift in Sources */,
+				767EB4AA2C7D54DF008524CF /* MockNetworkService.swift in Sources */,
+				767EB4B02C7D6A7E008524CF /* AlbumFetcherServiceTests.swift in Sources */,
+				767EB4AC2C7D5552008524CF /* NetworkServiceTests.swift in Sources */,
+				767EB4AE2C7D6A02008524CF /* PostFetcherImplementationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

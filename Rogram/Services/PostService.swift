@@ -31,7 +31,6 @@ class PostFetcherImplementation: PostFetcherProtocol {
                     
                     for try await aggregatedPost in taskGroup {
                         if let aggregatedPost = aggregatedPost {
-                            print(aggregatedPost.title)
                             continuation.yield(aggregatedPost)
                         }
                     }
